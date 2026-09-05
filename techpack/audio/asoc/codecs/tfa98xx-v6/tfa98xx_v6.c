@@ -489,8 +489,8 @@ static ssize_t kernel_debug_read(struct file *file, char __user *buf,
                                  size_t count, loff_t *pos)
 {
 /* /sys/kernel/debug/ftm_tfa98xx */
+	char buffer[1024];
 	const int size = 1024;
-	char buffer[size];
 	int n = 0;
 
 	n += scnprintf(buffer + n, size - n, "%s ", ftm_load_file);
