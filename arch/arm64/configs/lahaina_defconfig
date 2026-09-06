@@ -6866,3 +6866,7 @@ CONFIG_OPLUS_FEATURE_PANIC_FLUSH=y
 CONFIG_BUILD_ARM64_DT_OVERLAY=y
 # CONFIG_UAPI_HEADER_TEST is not set
 # CONFIG_HEADERS_INSTALL is not set
+
+# BailinT: 恢复 WALT —— techpack/sched/walt.c 为 kernel/sched/walt.c __weak shim 的强符号覆盖（官方设计），
+# 树内 wts/walt.h 完整；此前关 WALT 系误判（真实错误为 healthinfo/hdrtest，已另行修复）
+CONFIG_SCHED_WALT=y
